@@ -1,0 +1,20 @@
+=== Circle ===
+Before switch:
+Vector circle: center=(5.4, 3.2), radius=2.6
+Switching renderer on the same Circle object...
+After switch:
+Raster circle: centerPixel=(5, 3), radiusPixels=3
+
+=== Square ===
+Before switch:
+Vector line: from=(1.2, 2.4), to=(4.7, 2.4)
+Vector line: from=(4.7, 2.4), to=(4.7, 5.9)
+Vector line: from=(4.7, 5.9), to=(1.2, 5.9)
+Vector line: from=(1.2, 5.9), to=(1.2, 2.4)
+Switching renderer on the same Square object...
+After switch:
+Raster line: fromPixel=(1, 2), toPixel=(5, 2)
+Raster line: fromPixel=(5, 2), toPixel=(5, 6)
+Raster line: fromPixel=(5, 6), toPixel=(1, 6)
+Raster line: fromPixel=(1, 6), toPixel=(1, 2)
+
