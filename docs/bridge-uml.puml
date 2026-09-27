@@ -1,0 +1,59 @@
+@startuml
+title Bridge Pattern in Java
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+skinparam shadowing false
+top to bottom direction
+
+abstract class Shape {
+  # x : double {readOnly}
+  # y : double {readOnly}
+  - renderer : Renderer
+  # Shape(x, y, renderer)
+  + setRenderer(renderer : Renderer) : void
+  # getRenderer() : Renderer
+  # {static} requirePositive(value, name) : double
+  - {static} requireFinite(value, name) : double
+  + {abstract} draw() : void
+}
+class Circle {
+  - radius : double {readOnly}
+  + Circle(x, y, radius, renderer)
+  + draw() : void
+}
+class Square {
+  - side : double {readOnly}
+  + Square(x, y, side, renderer)
+  + draw() : void
+}
+interface Renderer {
+  + renderCircle(x, y, radius) : void
+  + renderLine(startX, startY, endX, endY) : void
+}
+class VectorRenderer {
+  + renderCircle(x, y, radius) : void
+  + renderLine(startX, startY, endX, endY) : void
+}
+class RasterRenderer {
+  + renderCircle(x, y, radius) : void
+  + renderLine(startX, startY, endX, endY) : void
+}
+class Main {
+  + {static} main(args : String[]) : void
+  - {static} demonstrateSwitch(name, shape, replacement) : void
+}
+
+Shape <|-- Circle
+Shape <|-- Square
+Renderer <|.. VectorRenderer
+Renderer <|.. RasterRenderer
+Shape o--> "1" Renderer : renderer / bridge
+Main ..> Shape : uses
+Main ..> VectorRenderer : creates
+Main ..> RasterRenderer : creates
+note bottom of Shape
+Object composition: a shape holds a renderer.
+Hollow diamond = shared reference, as in the lecture.
+Renderer lifetime is not owned exclusively by one shape.
+end note
+@enduml

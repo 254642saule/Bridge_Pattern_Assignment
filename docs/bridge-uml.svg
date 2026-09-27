@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<rect width="1200" height="650" fill="white"/>
+<text x="315" y="35.43" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold" text-anchor="middle" fill="#101820">ABSTRACTION SIDE</text>
+<text x="925" y="35.43" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold" text-anchor="middle" fill="#101820">IMPLEMENTATION SIDE</text>
+<rect x="95" y="65" width="440" height="256" fill="white" stroke="#273746" stroke-width="2"/>
+<rect x="96" y="66" width="438" height="73" fill="#E8EFF5"/>
+<text x="315.0" y="91.77" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#101820">«abstract»</text>
+<text x="315.0" y="122.75" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="bold" text-anchor="middle" fill="#101820">Shape</text>
+<polyline points="95,139 535,139" fill="none" stroke="#273746" stroke-width="2"/>
+<text x="112" y="173.26" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" text-anchor="start" fill="#101820"># x, y : double</text>
+<text x="112" y="204.26" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" text-anchor="start" fill="#101820">- renderer : Renderer</text>
+<text x="112" y="235.26" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" text-anchor="start" fill="#101820">+ setRenderer(Renderer)</text>
+<text x="112" y="266.26" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" text-anchor="start" fill="#101820">+ draw() : void</text>
+<rect x="705" y="65" width="440" height="193" fill="white" stroke="#273746" stroke-width="2"/>
+<rect x="706" y="66" width="438" height="73" fill="#E8EFF5"/>
+<text x="925.0" y="91.77" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="normal" text-anchor="middle" fill="#101820">«interface»</text>
+<text x="925.0" y="122.75" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="bold" text-anchor="middle" fill="#101820">Renderer</text>
+<polyline points="705,139 1145,139" fill="none" stroke="#273746" stroke-width="2"/>
+<text x="722" y="173.26" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" text-anchor="start" fill="#101820">+ renderCircle(x, y, radius)</text>
+<text x="722" y="204.26" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="normal" text-anchor="start" fill="#101820">+ renderLine(x1, y1, x2, y2)</text>
+<polyline points="553,187 693,187" fill="none" stroke="#273746" stroke-width="2"/>
+<polygon points="535,187 546,178 557,187 546,196" fill="white" stroke="#273746" stroke-width="2"/>
+<polyline points="682,180 693,187 682,194" fill="none" stroke="#273746" stroke-width="2"/>
+<text x="620" y="146.43" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" fill="#101820">renderer</text>
+<text x="620" y="173.43" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="bold" text-anchor="middle" fill="#101820">bridge</text>
+<text x="682" y="219.43" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="normal" text-anchor="start" fill="#101820">1</text>
+<rect x="20" y="432" width="250" height="143" fill="white" stroke="#273746" stroke-width="2"/>
+<rect x="21" y="433" width="248" height="50" fill="#E8EFF5"/>
+<text x="145.0" y="464.09" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" fill="#101820">Circle</text>
+<polyline points="20,483 270,483" fill="none" stroke="#273746" stroke-width="2"/>
+<text x="37" y="515.6" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#101820">- radius : double</text>
+<text x="37" y="546.6" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#101820">+ draw() : void</text>
+<rect x="295" y="432" width="250" height="143" fill="white" stroke="#273746" stroke-width="2"/>
+<rect x="296" y="433" width="248" height="50" fill="#E8EFF5"/>
+<text x="420.0" y="464.09" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" fill="#101820">Square</text>
+<polyline points="295,483 545,483" fill="none" stroke="#273746" stroke-width="2"/>
+<text x="312" y="515.6" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#101820">- side : double</text>
+<text x="312" y="546.6" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#101820">+ draw() : void</text>
+<rect x="655" y="432" width="250" height="143" fill="white" stroke="#273746" stroke-width="2"/>
+<rect x="656" y="433" width="248" height="50" fill="#E8EFF5"/>
+<text x="780.0" y="464.09" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" fill="#101820">VectorRenderer</text>
+<polyline points="655,483 905,483" fill="none" stroke="#273746" stroke-width="2"/>
+<text x="672" y="515.6" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#101820">+ renderCircle(...)</text>
+<text x="672" y="546.6" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#101820">+ renderLine(...)</text>
+<rect x="930" y="432" width="250" height="143" fill="white" stroke="#273746" stroke-width="2"/>
+<rect x="931" y="433" width="248" height="50" fill="#E8EFF5"/>
+<text x="1055.0" y="464.09" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold" text-anchor="middle" fill="#101820">RasterRenderer</text>
+<polyline points="930,483 1180,483" fill="none" stroke="#273746" stroke-width="2"/>
+<text x="947" y="515.6" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#101820">+ renderCircle(...)</text>
+<text x="947" y="546.6" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" text-anchor="start" fill="#101820">+ renderLine(...)</text>
+<polyline points="145,432 145,382 315,382 315,340" fill="none" stroke="#273746" stroke-width="2"/>
+<polyline points="420,432 420,382 315,382" fill="none" stroke="#273746" stroke-width="2"/>
+<polygon points="315,321 304,340 326,340" fill="white" stroke="#273746" stroke-width="2"/>
+<polyline points="780,432 780,365 925,365 925,278" fill="none" stroke="#273746" stroke-width="2" stroke-dasharray="8 6"/>
+<polyline points="1055,432 1055,365 925,365" fill="none" stroke="#273746" stroke-width="2" stroke-dasharray="8 6"/>
+<polygon points="925,258 914,278 936,278" fill="white" stroke="#273746" stroke-width="2"/>
+<text x="285" y="612.6" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#101820">Inheritance</text>
+<text x="930" y="612.6" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#101820">Interface implementation</text>
+</svg>
